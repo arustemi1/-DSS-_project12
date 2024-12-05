@@ -1,0 +1,837 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/3/2024 12:33:47 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-9DSHDJ4"
+  DTS:CreatorName="DESKTOP-9DSHDJ4\stefa"
+  DTS:DTSID="{6B0E7268-1097-479B-9DE1-8C7F33C0FC16}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5314.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{4A00313A-4837-46EE-B900-E77EF8B72DB6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6C2077CB-2B04-42DB-B3BF-2938C4C94DE4}"
+      DTS:ObjectName="Gestione connessione file flat">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Desktop\[LDS]\LDS_Group12_Part1\table_names.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SourceTable"
+              DTS:DTSID="{8560A6F8-B296-4DC2-9D21-63F1473DC84A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" DestinationTable"
+              DTS:DTSID="{269730A5-D71E-4FE8-B54D-775E81DBF82E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_12_DB.Group_ID_12]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{042872CB-E4A5-4D8D-AB0A-AC1D0309A1DE}"
+      DTS:ObjectName="lds.di.unipi.it.Group_ID_12_DB.Group_ID_12">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_ID_12;Initial Catalog=Group_ID_12_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package1-{042872CB-E4A5-4D8D-AB0A-AC1D0309A1DE}lds.di.unipi.it.Group_ID_12_DB.Group_ID_12;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg4hsZjwYc0SAxruCQK2KGAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC1gKuWXZTqT27q+d6//3M7rAa4nQ7KT2MKxygqX5URiwAAAAAOgAAAAAIAACAAAACpNsJXiA6QOHG525lnI8Cxz41K56FhuZh+8QbWbyeoJiAAAABxp3dzw7JDBZxcfxL+olKlOyLzRCp7bCWAp6xA0QcGYEAAAAB3QOd7HwnR/fe4UvmDp2Wjr8AUvsBoH9kGmG/cA1ifsEC4/BF0PpwDiQxz+CmRvoph7QFqIsWQoQQThdCekhDl</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C4E77EF8-35B5-4DE2-B074-9D9BF948E6CF}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataPercentage">
+      <DTS:VariableValue
+        DTS:DataType="14">0.1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92ECFCA8-9155-4932-A039-CA9482C5D202}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DestinationTable">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FC4FE072-B688-42AA-B39B-22A19D302234}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceTable">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Attività Esegui SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{BDC5EB77-64F0-4FDF-B953-344EF395636D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Attività Esegui SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Attività Flusso di dati"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{5A32A5D0-13D0-4141-BB3D-C2E4D881A255}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Attività Flusso di dati"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Attività Flusso di dati\Destinazione recordset"
+              componentClassID="Microsoft.RecordsetDestination"
+              contactInfo="Destinazione recordset;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Crea e popola un recordset ADO in memoria disponibile esternamente al flusso di dati. Gli script e altri elementi del pacchetto possono utilizzare il recordset. Ad esempio, utilizzare un recordset per archiviare i nomi di file che verranno caricati nel data warehouse."
+              name="Destinazione recordset">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il recordset."
+                  name="VariableName">User::SourceTable</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Destinazione recordset.Inputs[Input destinazione recordset]"
+                  hasSideEffects="true"
+                  name="Input destinazione recordset">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Destinazione recordset.Inputs[Input destinazione recordset].Columns[SourceTable]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SourceTable"
+                      lineageId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].Columns[SourceTable]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Destinazione recordset.Inputs[Input destinazione recordset].Columns[DestinationTable]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" DestinationTable"
+                      lineageId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].Columns[ DestinationTable]"
+                      name="DestinationTable" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Origine file flat"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origine file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Origine file flat"
+              localeId="1040"
+              name="Origine file flat"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se le colonne di lunghezza zero vengono considerate Null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome di una colonna di output contenente il nome del file. Se non si specifica un nome, non verrà generata alcuna colonna di output con il nome di file."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Origine file flat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestione connessione file flat]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestione connessione file flat]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat]"
+                  name="Output origine file flat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].Columns[SourceTable]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].ExternalColumns[SourceTable]"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].Columns[SourceTable]"
+                      name="SourceTable"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se la colonna utilizza le routine di analisi più veloci indipendenti dalle impostazioni locali."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se i dati sono in formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].Columns[ DestinationTable]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].ExternalColumns[ DestinationTable]"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].Columns[ DestinationTable]"
+                      name=" DestinationTable"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se la colonna utilizza le routine di analisi più veloci indipendenti dalle impostazioni locali."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se i dati sono in formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].ExternalColumns[SourceTable]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceTable" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat].ExternalColumns[ DestinationTable]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" DestinationTable" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output errori origine file flat]"
+                  isErrorOut="true"
+                  name="Output errori origine file flat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output errori origine file flat].Columns[Colonna di output degli errori per l'origine file flat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonna di output degli errori per l'origine file flat"
+                      lineageId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output errori origine file flat].Columns[Colonna di output degli errori per l'origine file flat]"
+                      name="Colonna di output degli errori per l'origine file flat" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output errori origine file flat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output errori origine file flat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output errori origine file flat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output errori origine file flat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output origine file flat]"
+              endId="Package\Attività Flusso di dati\Destinazione recordset.Inputs[Input destinazione recordset]"
+              name="Output origine file flat"
+              startId="Package\Attività Flusso di dati\Origine file flat.Outputs[Output origine file flat]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Contenitore Ciclo Foreach"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Contenitore Ciclo Foreach"
+      DTS:Disabled="True"
+      DTS:DTSID="{C5396E7B-B266-4C73-9184-32611835B4E5}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Contenitore Ciclo Foreach">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Contenitore Ciclo Foreach\Attività Esegui SQL"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{31FD0622-737A-483F-8890-67B9FF7A7B27}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Attività Esegui SQL"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Attività Flusso di dati"
+          DTS:DTSID="{C44A5600-2B6D-4FD4-A37E-7400D863804D}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Attività Flusso di dati"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Campionamento percentuale"
+                  componentClassID="Microsoft.PctSampling"
+                  contactInfo="Campionamento percentuale;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+                  description="Esegue campionamenti casuali in una percentuale di righe da un flusso di dati di input. Ad esempio, utilizzarlo due volte per creare un modello di data mining: creare un campione di modello a scopo formativo e uno a scopo di test."
+                  name="Campionamento percentuale">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica le dimensioni del campione in percentuale."
+                      expressionType="Notify"
+                      name="SamplingValue">10</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il valore di inizializzazione per il generatore di numeri casuali."
+                      name="SamplingSeed">11</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Campionamento percentuale.Inputs[Campionamento percentuale Input 1]"
+                      name="Campionamento percentuale Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Campionamento percentuale.Outputs[Output selezionato campionamento]"
+                      exclusionGroup="1"
+                      name="Output selezionato campionamento"
+                      synchronousInputId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Campionamento percentuale.Inputs[Campionamento percentuale Input 1]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Output per le righe nel campione"
+                          name="Selected">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Campionamento percentuale.Outputs[Output non selezionato campionamento]"
+                      exclusionGroup="1"
+                      name="Output non selezionato campionamento"
+                      synchronousInputId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Campionamento percentuale.Inputs[Campionamento percentuale Input 1]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Output per le righe nel campione"
+                          name="Selected">false</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
+                  description="Destinazione OLE DB"
+                  name="Destinazione OLE DB"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Comando SQL da eseguire."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la modalità utilizzata per accedere al database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB.Connections[OleDbConnection]"
+                      description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                      errorOrTruncationOperation="Inserimento"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Input destinazione OLE DB">
+                      <externalMetadataColumns
+                        isUsed="True" />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Output errori destinazione OLE DB"
+                      synchronousInputId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB.Inputs[Input destinazione OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+                  description="Origine OLE DB"
+                  name="Origine OLE DB"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Comando SQL da eseguire."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="Variabile che contiene il comando SQL da eseguire."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la modalità utilizzata per accedere al database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Mapping tra i parametri nel comando SQL e le variabili."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB.Connections[OleDbConnection]"
+                      description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB.Outputs[Output origine OLE DB]"
+                      name="Output origine OLE DB">
+                      <externalMetadataColumns
+                        isUsed="True" />
+                    </output>
+                    <output
+                      refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB.Outputs[Output errori origine OLE DB]"
+                      isErrorOut="true"
+                      name="Output errori origine OLE DB">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati.Paths[Output origine OLE DB]"
+                  endId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Campionamento percentuale.Inputs[Campionamento percentuale Input 1]"
+                  name="Output origine OLE DB"
+                  startId="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB.Outputs[Output origine OLE DB]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Contenitore Ciclo Foreach.PrecedenceConstraints[Vincolo]"
+          DTS:CreationName=""
+          DTS:DTSID="{D9142FF2-3867-4DC8-8CB2-100F3533B595}"
+          DTS:From="Package\Contenitore Ciclo Foreach\Attività Esegui SQL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Vincolo"
+          DTS:To="Package\Contenitore Ciclo Foreach\Attività Flusso di dati" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Container just 10%"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Contenitore Ciclo Foreach"
+      DTS:DTSID="{01FFE877-BEC9-43B9-98F1-8CA6F03DCF99}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Container just 10%">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachADOEnumerator"
+        DTS:DTSID="{A6BF01AD-F496-4D8F-BA5C-4906FB60DF5A}"
+        DTS:ObjectName="{A6BF01AD-F496-4D8F-BA5C-4906FB60DF5A}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Container just 10%\Attività Flusso di dati"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Attività Flusso di dati"
+          DTS:DTSID="{E46B7DC3-ED8B-48F4-907C-A95BC94AE2B1}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Attività Flusso di dati"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TestTable SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:Disabled="True"
+      DTS:DTSID="{9BAD98AC-0EC3-4C9E-9F3D-F3BC868D4A39}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TestTable SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{042872CB-E4A5-4D8D-AB0A-AC1D0309A1DE}"
+          SQLTask:SqlStatementSource="select top 0 * into TestTable_SSIS&#xA;from TestTable&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TestTable2 SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:Disabled="True"
+      DTS:DTSID="{A06CF098-02C0-49A7-95B8-33ED5C0941E8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TestTable2 SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{042872CB-E4A5-4D8D-AB0A-AC1D0309A1DE}"
+          SQLTask:SqlStatementSource="select top 0 * into TestTable2_SSIS&#xA;from TestTable2&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Contenitore Ciclo Foreach\Attività Esegui SQL"
+          TopLeft="67.5142869717615,38.2588234355706" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Contenitore Ciclo Foreach\Attività Flusso di dati"
+          TopLeft="71.0857155507925,172.082352730034" />
+        <EdgeLayout
+          Id="Package\Contenitore Ciclo Foreach.PrecedenceConstraints[Vincolo]"
+          TopLeft="155.100001261277,79.8588234355706">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,92.2235292944632"
+              Start="0,0"
+              End="0,84.7235292944632">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,84.7235292944632" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="308,270.4"
+          Size="308,313.6"
+          Id="Package\Contenitore Ciclo Foreach"
+          TopLeft="37.8571429377304,52.4588234925456" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Foreach Container just 10%\Attività Flusso di dati"
+          TopLeft="47.457143959525,94.7529410008535" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="298.4,244.8"
+          Size="298.4,288"
+          Id="Package\Foreach Container just 10%"
+          TopLeft="450.714286673738,169.282352843984" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\TestTable SQL"
+          TopLeft="426.428572336326,16.1529412401485" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\TestTable2 SQL"
+          TopLeft="606.428572719499,11.5647059500526" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Attività Esegui SQL"
+          TopLeft="793.942858712041,120.058823424176" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Attività Flusso di dati"
+          TopLeft="555.628572485338,97.8823528553788" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Contenitore Ciclo Foreach\Attività Flusso di dati">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Destinazione OLE DB"
+          TopLeft="341.428572155383,241.647058611716" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Origine OLE DB"
+          TopLeft="357.857143618927,36.4470588168265" />
+        <NodeLayout
+          Size="213.6,41.6"
+          Id="Package\Contenitore Ciclo Foreach\Attività Flusso di dati\Campionamento percentuale"
+          TopLeft="320.714286397002,146.564705779128" />
+        <EdgeLayout
+          Id="Package\Contenitore Ciclo Foreach\Attività Flusso di dati.Paths[Output origine OLE DB]"
+          TopLeft="430.485715007965,78.0470588168264">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.5176469623011"
+              Start="0,0"
+              End="0,61.0176469623011">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.0176469623011" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Attività Flusso di dati">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="185.6,41.6"
+          Id="Package\Attività Flusso di dati\Destinazione recordset"
+          TopLeft="507.99999243021,229.999996572733" />
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\Attività Flusso di dati\Origine file flat"
+          TopLeft="532.999992057681,112.999998316169" />
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine file flat]"
+          TopLeft="603.899992243946,154.599998316169">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75.3999982565642"
+              Start="0,0"
+              End="0,67.8999982565642">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.8999982565642" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,3110 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/3/2024 4:40:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-9DSHDJ4"
+  DTS:CreatorName="DESKTOP-9DSHDJ4\stefa"
+  DTS:DTSID="{979D2EFC-2F01-46DE-8807-DF94BC77BE93}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5314.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{A8369408-6ECD-4FA1-B1D9-803BC4384442}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EAB18DBB-2954-44E8-91DA-388D1DBCF9EF}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Desktop\[LDS]\LDS_Group12_Part1\query_flatfile\q9_try1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="h_crash_count"
+              DTS:DTSID="{3C6817EC-FDD8-451E-AA8D-6904C8D75F36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="area_risk_level"
+              DTS:DTSID="{4C2FE88E-BA45-40BD-95DC-5EEA90608CDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="not_h_crash_count"
+              DTS:DTSID="{D8C5EE8B-868B-4E36-B8B2-E93EDF0A8924}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C5FEC9CD-3186-44EF-A604-22531D0C2520}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Desktop\[LDS]\LDS_Group12_Part1\query_flatfile\query9.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="h_crash_count"
+              DTS:DTSID="{F1A4939C-279A-4A70-B3F3-9A2167D730CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="area_risk_level"
+              DTS:DTSID="{1837A4A1-BD4D-4B90-BCA1-D4FD70C6AD84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="not_h_crash_count"
+              DTS:DTSID="{630796E6-E49C-41C4-B618-7AB82FF26954}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 14]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{857B6563-9C03-4E8F-A1D2-DA6757F9D815}"
+      DTS:ObjectName="Flat File Connection Manager 14">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Desktop\[LDS]\LDS_Group12_Part1\query_flatfile\query7a_headers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="beat_id"
+              DTS:DTSID="{E5303786-C015-49E1-B323-F455DD29F11F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="day_vehicle_count"
+              DTS:DTSID="{2CB1F95B-9EA3-4772-BAEC-084B4B5E5D73}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="night_vehicle_count"
+              DTS:DTSID="{9E4A1390-0129-449C-BAA7-1A7A88AF4F1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="day_night_crash_index"
+              DTS:DTSID="{A80D473E-6AC2-4A95-90B0-26F73EAB212E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_12_DB.Group_ID_12]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{ED17CEA2-FA24-4317-A7C4-4F716DF17443}"
+      DTS:ObjectName="lds.di.unipi.it.Group_ID_12_DB.Group_ID_12">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_ID_12;Initial Catalog=Group_ID_12_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package1-{ED17CEA2-FA24-4317-A7C4-4F716DF17443}lds.di.unipi.it.Group_ID_12_DB.Group_ID_12;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg4hsZjwYc0SAxruCQK2KGAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAz/z0CiW96YXJo+D/8RbxoHagHGeO2lNpw0/hg/QtdtwAAAAAOgAAAAAIAACAAAAAJffTKHvwPI6cx0HUvNsRTuG8eKm3EhbWIooqzfSzGUCAAAACT8Ssj+ZmDtFO46o4yCwwy8XT92oQ1PwQpf9k1ba+PGkAAAAAhmSz7b24K9nvi5SugJFmElalvwhQe+eRO7Jq1H64rwR7l33Qb/n49cHMMpq3D9pHk9NMi8NtOPOXofBS0PDFU</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{D221060D-D5D2-4859-B111-8C47E5C19E4F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Aggregazione"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Aggregazione"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Aggregazione.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregazione.Inputs[Input aggregazione 1].Columns[area_risk_level]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="area_risk_level"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[area_risk_level]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregazione.Inputs[Input aggregazione 1].Columns[is_holiday]"
+                      cachedDataType="i4"
+                      cachedName="is_holiday"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[is_holiday]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregazione.Inputs[Input aggregazione 1].Columns[crash_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="crash_id"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[crash_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[area_risk_level]"
+                      name="area_risk_level">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[area_risk_level]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[is_holiday]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[is_holiday]"
+                      name="is_holiday">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[is_holiday]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[h_crash_count]"
+                      dataType="ui4"
+                      lineageId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[h_crash_count]"
+                      name="h_crash_count">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[crash_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">3</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                          name="CountDistinctScale">0</property>
+                        <property
+                          dataType="System.UInt32"
+                          description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                          name="CountDistinctKeys">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Aggregazione 1"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Aggregazione 1"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Aggregazione 1.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregazione 1.Inputs[Input aggregazione 1].Columns[area_risk_level]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="area_risk_level"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[area_risk_level]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregazione 1.Inputs[Input aggregazione 1].Columns[is_holiday]"
+                      cachedDataType="i4"
+                      cachedName="is_holiday"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[is_holiday]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregazione 1.Inputs[Input aggregazione 1].Columns[crash_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="crash_id"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[crash_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[area_risk_level]"
+                      name="area_risk_level">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[area_risk_level]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[is_holiday]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[is_holiday]"
+                      name="is_holiday">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[is_holiday]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[not_h_crash_count]"
+                      dataType="ui4"
+                      lineageId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[not_h_crash_count]"
+                      name="not_h_crash_count">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[crash_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">3</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                          name="CountDistinctScale">0</property>
+                        <property
+                          dataType="System.UInt32"
+                          description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                          name="CountDistinctKeys">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Get ClaimFactTable"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Get ClaimFactTable"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_ID_12].[S_ClaimFactTable]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Get ClaimFactTable.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_12_DB.Group_ID_12]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_12_DB.Group_ID_12]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[crash_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[crash_id]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[crash_id]"
+                      name="crash_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[location_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[location_id]"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[location_id]"
+                      name="location_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[date_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[date_id]"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[date_id]"
+                      name="date_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[person_id]"
+                      dataType="wstr"
+                      length="10"
+                      name="person_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[crash_id]"
+                      dataType="wstr"
+                      length="10"
+                      name="crash_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[location_id]"
+                      dataType="i4"
+                      name="location_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[date_id]"
+                      dataType="wstr"
+                      length="8"
+                      name="date_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[cause_id]"
+                      dataType="wstr"
+                      length="10"
+                      name="cause_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[damage_category]"
+                      dataType="wstr"
+                      length="20"
+                      name="damage_category" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[damage]"
+                      dataType="r8"
+                      name="damage" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].ExternalColumns[vehicle_id]"
+                      dataType="wstr"
+                      length="15"
+                      name="vehicle_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[crash_id]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[crash_id]"
+                      name="crash_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[location_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[location_id]"
+                      name="location_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[date_id]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output errori origine OLE DB].Columns[date_id]"
+                      name="date_id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Get DateDim"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Get DateDim"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_ID_12].[S_DateDimension]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Get DateDim.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_12_DB.Group_ID_12]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_12_DB.Group_ID_12]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].Columns[is_holiday]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[is_holiday]"
+                      lineageId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].Columns[is_holiday]"
+                      name="is_holiday"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].Columns[date_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[date_id]"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].Columns[date_id]"
+                      name="date_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[date_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="date_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[month]"
+                      dataType="i4"
+                      name="month" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[year]"
+                      dataType="i4"
+                      name="year" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[quarter]"
+                      dataType="i4"
+                      name="quarter" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[week_number]"
+                      dataType="i4"
+                      name="week_number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[day_of_week]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="day_of_week" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[is_weekend]"
+                      dataType="i4"
+                      name="is_weekend" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].ExternalColumns[is_holiday]"
+                      dataType="i4"
+                      name="is_holiday" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Get DateDim.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output errori origine OLE DB].Columns[is_holiday]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get DateDim.Outputs[Output errori origine OLE DB].Columns[is_holiday]"
+                      name="is_holiday" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get DateDim.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get DateDim.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get DateDim.Outputs[Output errori origine OLE DB].Columns[date_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Get DateDim.Outputs[Output errori origine OLE DB].Columns[date_id]"
+                      name="date_id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Get GeographyDim"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Get GeographyDim"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_ID_12].[S_GeographyDimension]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Get GeographyDim.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_12_DB.Group_ID_12]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_12_DB.Group_ID_12]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[location_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].ExternalColumns[location_id]"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[location_id]"
+                      name="location_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[beat_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].ExternalColumns[beat_id]"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[beat_id]"
+                      name="beat_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[area_risk_level]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].ExternalColumns[area_risk_level]"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[area_risk_level]"
+                      name="area_risk_level"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].ExternalColumns[location_id]"
+                      dataType="i4"
+                      name="location_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].ExternalColumns[beat_id]"
+                      dataType="i4"
+                      name="beat_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].ExternalColumns[street_name]"
+                      dataType="wstr"
+                      length="35"
+                      name="street_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].ExternalColumns[street_number]"
+                      dataType="wstr"
+                      length="10"
+                      name="street_number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].ExternalColumns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      name="area_risk_level" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[location_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[location_id]"
+                      name="location_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[beat_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[beat_id]"
+                      name="beat_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output errori origine OLE DB].Columns[area_risk_level]"
+                      name="area_risk_level" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Merge join 1"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Merge join 1.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 1.Inputs[Input merge join sinistro].Columns[date_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="date_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Output ordinamento].Columns[date_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 1.Inputs[Input merge join sinistro].Columns[is_holiday]"
+                      cachedDataType="i4"
+                      cachedName="is_holiday"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Output ordinamento].Columns[is_holiday]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Merge join 1.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 1.Inputs[Input merge join destro].Columns[date_id]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="date_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento].Columns[date_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 1.Inputs[Input merge join destro].Columns[crash_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="crash_id"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento].Columns[crash_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 1.Inputs[Input merge join destro].Columns[location_id]"
+                      cachedDataType="i4"
+                      cachedName="location_id"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento].Columns[location_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[date_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[date_id]"
+                      name="date_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 1.Inputs[Input merge join sinistro].Columns[date_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[is_holiday]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[is_holiday]"
+                      name="is_holiday">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 1.Inputs[Input merge join sinistro].Columns[is_holiday]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[crash_id]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[crash_id]"
+                      name="crash_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 1.Inputs[Input merge join destro].Columns[crash_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[location_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[location_id]"
+                      name="location_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 1.Inputs[Input merge join destro].Columns[location_id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Merge join 2"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro].Columns[location_id]"
+                      cachedDataType="i4"
+                      cachedName="location_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[location_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro].Columns[crash_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="crash_id"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[crash_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro].Columns[date_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="date_id"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[date_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro].Columns[is_holiday]"
+                      cachedDataType="i4"
+                      cachedName="is_holiday"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[is_holiday]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join destro].Columns[location_id]"
+                      cachedDataType="i4"
+                      cachedName="location_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento].Columns[location_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join destro].Columns[area_risk_level]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="area_risk_level"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento].Columns[area_risk_level]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join destro].Columns[beat_id]"
+                      cachedDataType="i4"
+                      cachedName="beat_id"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento].Columns[beat_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[location_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[location_id]"
+                      name="location_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro].Columns[location_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[crash_id]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[crash_id]"
+                      name="crash_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro].Columns[crash_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[date_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[date_id]"
+                      name="date_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro].Columns[date_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[is_holiday]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[is_holiday]"
+                      name="is_holiday">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro].Columns[is_holiday]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[area_risk_level]"
+                      name="area_risk_level">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 2.Inputs[Input merge join destro].Columns[area_risk_level]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[beat_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[beat_id]"
+                      name="beat_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 2.Inputs[Input merge join destro].Columns[beat_id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Merge join 3"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join 3"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Merge join 3.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 3.Inputs[Input merge join sinistro].Columns[area_risk_level]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="area_risk_level"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento].Columns[area_risk_level]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 3.Inputs[Input merge join sinistro].Columns[h_crash_count]"
+                      cachedDataType="ui4"
+                      cachedName="h_crash_count"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento].Columns[h_crash_count]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Merge join 3.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 3.Inputs[Input merge join destro].Columns[area_risk_level]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="area_risk_level"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento].Columns[area_risk_level]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge join 3.Inputs[Input merge join destro].Columns[not_h_crash_count]"
+                      cachedDataType="ui4"
+                      cachedName="not_h_crash_count"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento].Columns[not_h_crash_count]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join].Columns[h_crash_count]"
+                      dataType="ui4"
+                      lineageId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join].Columns[h_crash_count]"
+                      name="h_crash_count">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 3.Inputs[Input merge join sinistro].Columns[h_crash_count]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join].Columns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join].Columns[area_risk_level]"
+                      name="area_risk_level"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 3.Inputs[Input merge join sinistro].Columns[area_risk_level]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join].Columns[not_h_crash_count]"
+                      dataType="ui4"
+                      lineageId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join].Columns[not_h_crash_count]"
+                      name="not_h_crash_count">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge join 3.Inputs[Input merge join destro].Columns[not_h_crash_count]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Result file"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1040"
+              name="Result file"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Result file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat].Columns[h_crash_count]"
+                      cachedDataType="ui4"
+                      cachedName="h_crash_count"
+                      externalMetadataColumnId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat].ExternalColumns[h_crash_count]"
+                      lineageId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join].Columns[h_crash_count]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat].Columns[area_risk_level]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="area_risk_level"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat].ExternalColumns[area_risk_level]"
+                      lineageId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join].Columns[area_risk_level]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat].Columns[not_h_crash_count]"
+                      cachedDataType="ui4"
+                      cachedName="not_h_crash_count"
+                      externalMetadataColumnId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat].ExternalColumns[not_h_crash_count]"
+                      lineageId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join].Columns[not_h_crash_count]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat].ExternalColumns[h_crash_count]"
+                      dataType="ui4"
+                      name="h_crash_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat].ExternalColumns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      name="area_risk_level" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat].ExternalColumns[not_h_crash_count]"
+                      dataType="ui4"
+                      name="not_h_crash_count" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 1.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Input ordinamento].Columns[date_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="date_id"
+                      lineageId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].Columns[date_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Input ordinamento].Columns[is_holiday]"
+                      cachedDataType="i4"
+                      cachedName="is_holiday"
+                      lineageId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].Columns[is_holiday]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 1.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Output ordinamento].Columns[date_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Output ordinamento].Columns[date_id]"
+                      name="date_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].Columns[date_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Output ordinamento].Columns[is_holiday]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Output ordinamento].Columns[is_holiday]"
+                      name="is_holiday">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB].Columns[is_holiday]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Sort 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 2.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Input ordinamento].Columns[crash_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="crash_id"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[crash_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Input ordinamento].Columns[location_id]"
+                      cachedDataType="i4"
+                      cachedName="location_id"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[location_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Input ordinamento].Columns[date_id]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="date_id"
+                      lineageId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[date_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento].Columns[crash_id]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento].Columns[crash_id]"
+                      name="crash_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[crash_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento].Columns[location_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento].Columns[location_id]"
+                      name="location_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[location_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento].Columns[date_id]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento].Columns[date_id]"
+                      name="date_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB].Columns[date_id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 3"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Sort 3"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 3.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 3.Inputs[Input ordinamento].Columns[date_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="date_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[date_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 3.Inputs[Input ordinamento].Columns[is_holiday]"
+                      cachedDataType="i4"
+                      cachedName="is_holiday"
+                      lineageId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[is_holiday]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 3.Inputs[Input ordinamento].Columns[crash_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="crash_id"
+                      lineageId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[crash_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 3.Inputs[Input ordinamento].Columns[location_id]"
+                      cachedDataType="i4"
+                      cachedName="location_id"
+                      lineageId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[location_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[date_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[date_id]"
+                      name="date_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[date_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[is_holiday]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[is_holiday]"
+                      name="is_holiday">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[is_holiday]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[crash_id]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[crash_id]"
+                      name="crash_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[crash_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[location_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento].Columns[location_id]"
+                      name="location_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge join 1.Outputs[Output merge join].Columns[location_id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 4"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Sort 4"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 4.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 4.Inputs[Input ordinamento].Columns[location_id]"
+                      cachedDataType="i4"
+                      cachedName="location_id"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[location_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 4.Inputs[Input ordinamento].Columns[beat_id]"
+                      cachedDataType="i4"
+                      cachedName="beat_id"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[beat_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 4.Inputs[Input ordinamento].Columns[area_risk_level]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="area_risk_level"
+                      lineageId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[area_risk_level]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento].Columns[location_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento].Columns[location_id]"
+                      name="location_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[location_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento].Columns[beat_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento].Columns[beat_id]"
+                      name="beat_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[beat_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento].Columns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento].Columns[area_risk_level]"
+                      name="area_risk_level">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB].Columns[area_risk_level]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 5"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Sort 5"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 5.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Input ordinamento].Columns[area_risk_level]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="area_risk_level"
+                      lineageId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[area_risk_level]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Input ordinamento].Columns[is_holiday]"
+                      cachedDataType="i4"
+                      cachedName="is_holiday"
+                      lineageId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[is_holiday]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Input ordinamento].Columns[h_crash_count]"
+                      cachedDataType="ui4"
+                      cachedName="h_crash_count"
+                      lineageId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[h_crash_count]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento].Columns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento].Columns[area_risk_level]"
+                      name="area_risk_level"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[area_risk_level]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento].Columns[is_holiday]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento].Columns[is_holiday]"
+                      name="is_holiday">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[is_holiday]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento].Columns[h_crash_count]"
+                      dataType="ui4"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento].Columns[h_crash_count]"
+                      name="h_crash_count">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1].Columns[h_crash_count]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 6"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Sort 6"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 6.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Input ordinamento].Columns[area_risk_level]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="area_risk_level"
+                      lineageId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[area_risk_level]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Input ordinamento].Columns[is_holiday]"
+                      cachedDataType="i4"
+                      cachedName="is_holiday"
+                      lineageId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[is_holiday]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Input ordinamento].Columns[not_h_crash_count]"
+                      cachedDataType="ui4"
+                      cachedName="not_h_crash_count"
+                      lineageId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[not_h_crash_count]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento].Columns[area_risk_level]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento].Columns[area_risk_level]"
+                      name="area_risk_level"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[area_risk_level]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento].Columns[is_holiday]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento].Columns[is_holiday]"
+                      name="is_holiday">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[is_holiday]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento].Columns[not_h_crash_count]"
+                      dataType="ui4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento].Columns[not_h_crash_count]"
+                      name="not_h_crash_count">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1].Columns[not_h_crash_count]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Suddivisione condizionale 1"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Suddivisione condizionale;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Indirizza righe di dati a output diversi a seconda del contenuto dei dati. Usare le condizioni (espressioni SSIS) per specificare le righe da indirizzare. Ad esempio, separare i record da eliminare da quelli pronti per essere caricati oppure indirizzare unicamente un subset di record."
+              name="Suddivisione condizionale 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Suddivisione condizionale 1.Inputs[Input suddivisione condizionale]"
+                  description="Input della trasformazione Suddivisione condizionale"
+                  name="Input suddivisione condizionale">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Suddivisione condizionale 1.Inputs[Input suddivisione condizionale].Columns[is_holiday]"
+                      cachedDataType="i4"
+                      cachedName="is_holiday"
+                      lineageId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[is_holiday]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[holiday]"
+                  description="Output 1 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="holiday"
+                  synchronousInputId="Package\Data Flow Task\Suddivisione condizionale 1.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">#{Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[is_holiday]} == 1</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">is_holiday == 1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[not_holiday]"
+                  description="Output 2 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="not_holiday"
+                  synchronousInputId="Package\Data Flow Task\Suddivisione condizionale 1.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">#{Package\Data Flow Task\Merge join 2.Outputs[Output merge join].Columns[is_holiday]} == 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">is_holiday == 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[Output predefinito suddivisione condizionale]"
+                  description="Output predefinito per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  name="Output predefinito suddivisione condizionale"
+                  synchronousInputId="Package\Data Flow Task\Suddivisione condizionale 1.Inputs[Input suddivisione condizionale]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[Output errori suddivisione condizionale]"
+                  description="Output degli errori per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori suddivisione condizionale"
+                  synchronousInputId="Package\Data Flow Task\Suddivisione condizionale 1.Inputs[Input suddivisione condizionale]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[holiday]"
+              endId="Package\Data Flow Task\Aggregazione.Inputs[Input aggregazione 1]"
+              name="holiday"
+              startId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[holiday]" />
+            <path
+              refId="Package\Data Flow Task.Paths[not_holiday]"
+              endId="Package\Data Flow Task\Aggregazione 1.Inputs[Input aggregazione 1]"
+              name="not_holiday"
+              startId="Package\Data Flow Task\Suddivisione condizionale 1.Outputs[not_holiday]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output aggregazione 1]"
+              endId="Package\Data Flow Task\Sort 5.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Data Flow Task\Aggregazione.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output aggregazione 11]"
+              endId="Package\Data Flow Task\Sort 6.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Data Flow Task\Aggregazione 1.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output merge join]"
+              endId="Package\Data Flow Task\Sort 3.Inputs[Input ordinamento]"
+              name="Output merge join"
+              startId="Package\Data Flow Task\Merge join 1.Outputs[Output merge join]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output merge join1]"
+              endId="Package\Data Flow Task\Suddivisione condizionale 1.Inputs[Input suddivisione condizionale]"
+              name="Output merge join"
+              startId="Package\Data Flow Task\Merge join 2.Outputs[Output merge join]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output merge join2]"
+              endId="Package\Data Flow Task\Result file.Inputs[Input destinazione file flat]"
+              name="Output merge join"
+              startId="Package\Data Flow Task\Merge join 3.Outputs[Output merge join]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output ordinamento]"
+              endId="Package\Data Flow Task\Merge join 1.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\Data Flow Task\Sort 1.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output ordinamento1]"
+              endId="Package\Data Flow Task\Merge join 1.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Data Flow Task\Sort 2.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output ordinamento2]"
+              endId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\Data Flow Task\Sort 3.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output ordinamento3]"
+              endId="Package\Data Flow Task\Merge join 2.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Data Flow Task\Sort 4.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output ordinamento4]"
+              endId="Package\Data Flow Task\Merge join 3.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\Data Flow Task\Sort 5.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output ordinamento5]"
+              endId="Package\Data Flow Task\Merge join 3.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Data Flow Task\Sort 6.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output origine OLE DB]"
+              endId="Package\Data Flow Task\Sort 1.Inputs[Input ordinamento]"
+              name="Output origine OLE DB"
+              startId="Package\Data Flow Task\Get DateDim.Outputs[Output origine OLE DB]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output origine OLE DB1]"
+              endId="Package\Data Flow Task\Sort 2.Inputs[Input ordinamento]"
+              name="Output origine OLE DB"
+              startId="Package\Data Flow Task\Get ClaimFactTable.Outputs[Output origine OLE DB]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output origine OLE DB2]"
+              endId="Package\Data Flow Task\Sort 4.Inputs[Input ordinamento]"
+              name="Output origine OLE DB"
+              startId="Package\Data Flow Task\Get GeographyDim.Outputs[Output origine OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="191.428571836073,150.647058691482" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Data Flow Task\Merge join 3"
+          TopLeft="342.142857871189,744.870588008735" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Data Flow Task\Aggregazione 1"
+          TopLeft="413.571429451814,565.99999988605" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task\Sort 3"
+          TopLeft="167.857143214467,299.45882327604" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Data Flow Task\Get DateDim"
+          TopLeft="62.8571429909492,34.1908496523489" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task\Sort 5"
+          TopLeft="246.746032271289,646.903267833169" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task\Sort 4"
+          TopLeft="428.571429483744,301.752940921088" />
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\Data Flow Task\Result file"
+          TopLeft="354.126984880827,834.115032280987" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Data Flow Task\Get GeographyDim"
+          TopLeft="401.984127839845,229.105882161237" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Data Flow Task\Merge join 1"
+          TopLeft="154.438095398257,216.870588054315" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task\Sort 2"
+          TopLeft="255.000000542828,125.955555454267" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task\Sort 6"
+          TopLeft="442.777778720335,651.06666652233" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="56.4285715486931,126.720261335949" />
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package\Data Flow Task\Suddivisione condizionale 1"
+          TopLeft="280.714286311853,477.47058811129" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Data Flow Task\Merge join 2"
+          TopLeft="314.285714954746,393.99999979489" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Data Flow Task\Aggregazione"
+          TopLeft="230.00000048961,564.470588122685" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Data Flow Task\Get ClaimFactTable"
+          TopLeft="245.555556078278,34.8705882138449" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output ordinamento4]"
+          TopLeft="299.946032271289,688.50326783317">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89.3968255998996,56.3673201755655"
+              Start="0,0"
+              End="89.3968255998996,48.8673201755655">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4316519661975" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.4316519661975"
+                    Point2="0,33.4316519661975"
+                    Point3="4,33.4316519661975" />
+                  <mssgle:LineSegment
+                    End="85.3968255998996,33.4316519661975" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85.3968255998996,33.4316519661975"
+                    Point2="89.3968255998996,33.4316519661975"
+                    Point3="89.3968255998996,37.4316519661975" />
+                  <mssgle:LineSegment
+                    End="89.3968255998996,48.8673201755655" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output ordinamento3]"
+          TopLeft="481.771429483744,343.352940921088">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-77.085714528998,50.647058873802"
+              Start="0,0"
+              End="-77.085714528998,43.147058873802">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.0389452630826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.0389452630826"
+                    Point2="0,30.0389452630826"
+                    Point3="-4,30.0389452630826" />
+                  <mssgle:LineSegment
+                    End="-73.085714528998,30.0389452630826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-73.085714528998,30.0389452630826"
+                    Point2="-77.085714528998,30.0389452630826"
+                    Point3="-77.085714528998,34.0389452630826" />
+                  <mssgle:LineSegment
+                    End="-77.085714528998,43.147058873802" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output ordinamento2]"
+          TopLeft="221.057143214467,341.05882327604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.428571740279,52.94117651885"
+              Start="0,0"
+              End="140.428571740279,45.44117651885">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.399594349111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.399594349111"
+                    Point2="0,31.399594349111"
+                    Point3="4,31.399594349111" />
+                  <mssgle:LineSegment
+                    End="136.428571740279,31.399594349111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="136.428571740279,31.399594349111"
+                    Point2="140.428571740279,31.399594349111"
+                    Point3="140.428571740279,35.399594349111" />
+                  <mssgle:LineSegment
+                    End="140.428571740279,45.44117651885" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output ordinamento1]"
+          TopLeft="308.200000542828,167.555555454267">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-63.361905144571,49.3150326000479"
+              Start="0,0"
+              End="-63.361905144571,41.8150326000479">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.248915886925" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.248915886925"
+                    Point2="0,29.248915886925"
+                    Point3="-4,29.248915886925" />
+                  <mssgle:LineSegment
+                    End="-59.361905144571,29.248915886925" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59.361905144571,29.248915886925"
+                    Point2="-63.361905144571,29.248915886925"
+                    Point3="-63.361905144571,33.248915886925" />
+                  <mssgle:LineSegment
+                    End="-63.361905144571,41.8150326000479" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output ordinamento]"
+          TopLeft="109.628571548693,168.320261335949">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92.0095238495638,48.5503267183659"
+              Start="0,0"
+              End="92.0095238495638,41.0503267183659">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.7953661915826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.7953661915826"
+                    Point2="0,28.7953661915826"
+                    Point3="4,28.7953661915826" />
+                  <mssgle:LineSegment
+                    End="88.0095238495638,28.7953661915826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="88.0095238495638,28.7953661915826"
+                    Point2="92.0095238495638,28.7953661915826"
+                    Point3="92.0095238495638,32.7953661915826" />
+                  <mssgle:LineSegment
+                    End="92.0095238495638,41.0503267183659" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output merge join2]"
+          TopLeft="413.734921376008,786.470588008735">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.6444442722524"
+              Start="0,0"
+              End="0,40.1444442722524">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.1444442722524" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output merge join1]"
+          TopLeft="383.7000006333,435.59999979489">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.8705883164"
+              Start="0,0"
+              End="0,34.3705883164">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.3705883164" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output merge join]"
+          TopLeft="222.147619306362,258.470588054315">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.988235221725"
+              Start="0,0"
+              End="0,33.488235221725">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.488235221725" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output aggregazione 11]"
+          TopLeft="492.574604086075,607.59999988605">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.4666666362799"
+              Start="0,0"
+              End="0,35.9666666362799">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.9666666362799" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output aggregazione 1]"
+          TopLeft="300.57301638045,606.070588122685">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.8326797104845"
+              Start="0,0"
+              End="0,33.3326797104845">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.3326797104845" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[not_holiday]"
+          TopLeft="417.514286311853,519.07058811129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.6571431399605,46.9294117747603"
+              Start="0,0"
+              End="71.6571431399605,39.4294117747603">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.9875321203627" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.9875321203627"
+                    Point2="0,18.9875321203627"
+                    Point3="4,18.9875321203627" />
+                  <mssgle:LineSegment
+                    End="67.6571431399605,18.9875321203627" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.6571431399605,18.9875321203627"
+                    Point2="71.6571431399605,18.9875321203627"
+                    Point3="71.6571431399605,22.9875321203627" />
+                  <mssgle:LineSegment
+                    End="71.6571431399605,39.4294117747603" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="9.59501688248023,23.9875321203627,52.467109375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[holiday]"
+          TopLeft="384.314286311853,519.07058811129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-83.1142858222435,45.400000011395"
+              Start="0,0"
+              End="-83.1142858222435,37.900000011395">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7000000056976" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7000000056976"
+                    Point2="0,22.7000000056976"
+                    Point3="-4,22.7000000056976" />
+                  <mssgle:LineSegment
+                    End="-79.1142858222435,22.7000000056976" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-79.1142858222435,22.7000000056976"
+                    Point2="-83.1142858222435,22.7000000056976"
+                    Point3="-83.1142858222435,26.7000000056976" />
+                  <mssgle:LineSegment
+                    End="-83.1142858222435,37.900000011395" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-57.8856975986217,27.7000000056976,32.657109375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output origine OLE DB2]"
+          TopLeft="483.877778661794,270.705882161237">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.0470587598512"
+              Start="0,0"
+              End="0,23.5470587598512">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5470587598512" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output origine OLE DB1]"
+          TopLeft="330.355556078278,76.4705882138449">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-22.15555553545,49.4849672404221"
+              Start="0,0"
+              End="-22.15555553545,41.9849672404221">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7424836202111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.7424836202111"
+                    Point2="0,24.7424836202111"
+                    Point3="-4,24.7424836202111" />
+                  <mssgle:LineSegment
+                    End="-18.15555553545,24.7424836202111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.15555553545,24.7424836202111"
+                    Point2="-22.15555553545,24.7424836202111"
+                    Point3="-22.15555553545,28.7424836202111" />
+                  <mssgle:LineSegment
+                    End="-22.15555553545,41.9849672404221" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output origine OLE DB]"
+          TopLeft="132.057142990949,75.7908496523489">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-22.4285714422561,50.9294116836001"
+              Start="0,0"
+              End="-22.4285714422561,43.4294116836001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4647058418001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4647058418001"
+                    Point2="0,25.4647058418001"
+                    Point3="-4,25.4647058418001" />
+                  <mssgle:LineSegment
+                    End="-18.4285714422561,25.4647058418001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.4285714422561,25.4647058418001"
+                    Point2="-22.4285714422561,25.4647058418001"
+                    Point3="-22.4285714422561,29.4647058418001" />
+                  <mssgle:LineSegment
+                    End="-22.4285714422561,43.4294116836001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output ordinamento5]"
+          TopLeft="495.977778720335,692.66666652233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-63.4349208491465,52.2039214864051"
+              Start="0,0"
+              End="-63.4349208491465,44.7039214864051">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.9623258471092" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.9623258471092"
+                    Point2="0,30.9623258471092"
+                    Point3="-4,30.9623258471092" />
+                  <mssgle:LineSegment
+                    End="-59.4349208491465,30.9623258471092" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59.4349208491465,30.9623258471092"
+                    Point2="-63.4349208491465,30.9623258471092"
+                    Point3="-63.4349208491465,34.9623258471092" />
+                  <mssgle:LineSegment
+                    End="-63.4349208491465,44.7039214864051" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Get DateDim">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Get GeographyDim">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Get ClaimFactTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
