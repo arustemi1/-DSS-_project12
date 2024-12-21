@@ -1,0 +1,22 @@
+--Query 4: For each location, show the damage costs increase or decrease, in percentage, with respect to the previous year
+
+
+
+WITH 
+MEMBER DIFF_PREV_MONTH AS
+([Measures].[Damage] - 
+(PARALLELPERIOD([S Date Dimension].[Composit Month].[Composit Month], 
+1, [S Date Dimension].[Composit Month].CURRENTMEMBER), [Measures].[Damage]))/[Measures].[Damage] * 100 -- Step 1
+
+
+SELECT
+{[Measures].[Damage],DIFF_PREV_MONTH} ON COLUMNS,                  
+[S Date Dimension].[Composit Month].[Composit Month] ON ROWS                     
+
+
+FROM  [Group ID 12 DB]
+
+
+
+
+--1: Calculating percentage change in damage copmared to the  previous months

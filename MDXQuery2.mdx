@@ -1,0 +1,28 @@
+-- Query 2: For each month, show the total damage costs for each location and the grand total with respect to the location.
+
+
+WITH 
+  MEMBER [Measures].[Total Damage Costs] AS 
+    [Measures].[Damage]
+
+SELECT 
+  NON EMPTY {
+    [S Date Dimension].[Composit Month].MEMBERS,
+    [S Date Dimension].[Composit Month].[All]      --Step 1
+  } ON COLUMNS,
+
+  NON EMPTY {
+    [S Geography Dimension].[H Street Name].MEMBERS,
+    [S Geography Dimension].[H Street Name].[All]  --Step 2
+  } ON ROWS
+
+FROM 
+  [Group ID 12 DB]
+
+WHERE 
+  ([Measures].[Total Damage Costs])
+
+
+
+  --1: Grand total for each month (in columns) 
+  --2: Grand total for each street (in rows)

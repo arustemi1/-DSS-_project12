@@ -1,0 +1,34 @@
+-- Query 3: Compute the average yearly damage costs as follows: for each crash, calculate the total damage to the user divided by the number of distinct people involved in the
+-- crash. Then, compute the average of these values across all crashes in a year.
+
+WITH 
+MEMBER [Measures].[DamagePerCrashPerPerson] AS 
+    IIF(
+        [S Person Dimension].[H Person Id].COUNT > 0,
+        [Measures].[Damage] / [S Person Dimension].[H Person Id].COUNT,
+        NULL
+    )                                        -- Step 1
+MEMBER [Measures].[AvgYearlyDamagePerCrash] AS 
+    AVG(
+        [S Crash Dimension].[H Crash Id].MEMBERS,
+        [Measures].[DamagePerCrashPerPerson]
+    )                                        -- Step 2
+-- Step 3
+SELECT 
+    {
+        [Measures].[AvgYearlyDamagePerCrash] -- Step 4
+    } ON COLUMNS,
+
+    NON EMPTY 
+    {
+        [S Date Dimension].[Year].MEMBERS     -- Step 5
+    } ON ROWS
+
+FROM [Group ID 12 DB]
+
+
+--1: Calculating damage per crash per person
+--2: Calculating the average damage per year
+--3: Selecting the measures and displaying it by year
+--4: Average yearly damage per crash
+--5: Displaying by year

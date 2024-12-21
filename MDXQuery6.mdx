@@ -1,0 +1,67 @@
+--- For each vehicle type and each year, show the information and the (total) damage costs of the person with the highest reported damage.
+
+
+
+WITH 
+  -- Get the Person Id with the highest damage
+  MEMBER [Measures].[Person with Highest Damage] AS
+    TOPCOUNT(
+     [S Person Dimension].[H Person Id].[Person Id].MEMBERS,
+      1,
+      [Measures].[Damage]
+    ).ITEM(0).NAME
+
+  -- Get the Age of the person with the highest damage
+  MEMBER [Measures].[Age of Person] AS
+    TOPCOUNT(
+      [S Person Dimension].[H Person Id].[Person Id].MEMBERS,
+      1,
+      [Measures].[Damage]
+    ).ITEM(0).PROPERTIES("Age")
+
+  -- Get the Injury Severity of the person with the highest damage
+  MEMBER [Measures].[Injury Severity of Person] AS
+    TOPCOUNT(
+      [S Person Dimension].[H Person Id].[Person Id].MEMBERS,
+      1,
+      [Measures].[Damage]
+    ).ITEM(0).PROPERTIES("Injury Severity")
+
+  -- Get the Role in Crash of the person with the highest damage
+  MEMBER [Measures].[Role in Crash of Person] AS
+    TOPCOUNT(
+      [S Person Dimension].[H Person Id].[Person Id].MEMBERS,
+      1,
+      [Measures].[Damage]
+    ).ITEM(0).PROPERTIES("Role In Crash")
+
+  -- Total damage costs for the person with the highest reported damage
+  MEMBER [Measures].[Total Damage Costs for Top Person] AS
+    SUM(
+      TOPCOUNT(
+        [S Person Dimension].[H Person Id].[Person Id].MEMBERS,
+        1,
+        [Measures].[Damage]
+      ),
+      [Measures].[Damage]
+    )
+
+SELECT 
+  {
+    [Measures].[Person with Highest Damage],
+    [Measures].[Age of Person],
+    [Measures].[Injury Severity of Person],
+    [Measures].[Role in Crash of Person],
+    [Measures].[Total Damage Costs for Top Person]
+  } ON COLUMNS,
+
+  NONEMPTY(
+    CROSSJOIN(
+      [S Date Dimension].[Year].[Year].MEMBERS,
+      [S Vehicle Dimension].[H Vehicle Type].[Vehicle Type].MEMBERS
+    ),
+    [Measures].[Damage]
+  ) ON ROWS
+
+FROM 
+  [Group ID 12 DB]
