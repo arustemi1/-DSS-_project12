@@ -1,4 +1,0 @@
-holiday_crash_count,area_risk_level_non_holiday_crash_count
-9424,High  ,116260
-1814,Low   ,21588
-8356,Medium,100483

@@ -1,0 +1,104 @@
+WITH
+-- Define calculated members for counts
+MEMBER [Measures].[Secondary Cause Count] AS
+    SUM(
+        [S Cause Dimension].[H Primary Cause].[Primary Cause].MEMBERS,
+        ([Measures].[Count unique Crash id], [S Cause Dimension].[H Primary Cause].CURRENTMEMBER)
+    )
+
+MEMBER [Measures].[Primary Cause Count] AS
+    SUM(
+        [S Cause Dimension].[H Secondary Cause].[Secondary Cause].MEMBERS,
+        ([Measures].[Count unique Crash id], [S Cause Dimension].[H Secondary Cause].CURRENTMEMBER)
+    )
+
+MEMBER [Measures].[DamageAsSecondaryCause] AS
+    SUM(
+        [S Cause Dimension].[H Primary Cause].[Primary Cause].MEMBERS,
+        ([Measures].[Damage], [S Cause Dimension].[H Primary Cause].CURRENTMEMBER)
+    )
+
+MEMBER [Measures].[DamageAsPrimaryCause] AS
+    SUM(
+        [S Cause Dimension].[H Secondary Cause].[Secondary Cause].MEMBERS,
+        ([Measures].[Damage], [S Cause Dimension].[H Secondary Cause].CURRENTMEMBER)
+    )
+
+-- Define the new calculated measures
+MEMBER [Measures].[ScoreCause] AS
+    ([Measures].[Primary Cause Count] * 2) + [Measures].[Secondary Cause Count]
+
+MEMBER [Measures].[DamageInvolvingCause] AS
+    [Measures].[DamageAsPrimaryCause] + [Measures].[DamageAsSecondaryCause]
+
+MEMBER [Measures].[RankByScoreCause] AS
+    RANK(
+        ([S Date Dimension].[H Date].CURRENTMEMBER,
+         [S Cause Dimension].[H Primary Cause].CURRENTMEMBER,
+         [S Cause Dimension].[H Secondary Cause].CURRENTMEMBER),
+        ORDER(
+            NONEMPTY(
+                CROSSJOIN(
+                    { [S Date Dimension].[H Date].CURRENTMEMBER }, -- Restrict to the current year
+                    [Matching Causes]
+                ),
+                { [Measures].[Count unique Crash id] }
+            ),
+            [Measures].[ScoreCause],
+            BDESC -- Rank by descending order of Score Cause
+        )
+    )
+
+-- Pre-filtered set for matching causes
+SET [Matching Causes] AS
+    FILTER(
+        CROSSJOIN(
+            [S Cause Dimension].[H Primary Cause].[Primary Cause].MEMBERS,
+            [S Cause Dimension].[H Secondary Cause].[Secondary Cause].MEMBERS
+        ),
+        [S Cause Dimension].[H Primary Cause].CURRENTMEMBER.Name = [S Cause Dimension].[H Secondary Cause].CURRENTMEMBER.Name
+    )
+
+-- Create a set for years including "All"
+SET [Time Interval] AS
+    UNION(
+        [S Date Dimension].[H Date].[Year].MEMBERS,
+        {[S Date Dimension].[H Date].[All]}
+    )
+
+SELECT
+{
+    [Measures].[Secondary Cause Count],
+    [Measures].[DamageAsSecondaryCause],
+    [Measures].[Primary Cause Count],
+    [Measures].[DamageAsPrimaryCause],
+    [Measures].[ScoreCause],
+    [Measures].[DamageInvolvingCause],
+	[Measures].[RankByScoreCause] -- Include the rank in the output
+
+} ON COLUMNS,
+
+-- Include rows for each year and "All"
+--NONEMPTY(
+--    CROSSJOIN(
+--        [Time Interval],
+--        [Matching Causes]
+--    ),
+--    { [Measures].[Count unique Crash id] }
+--) ON ROWS
+
+--FROM [GROUP ID 12 DB]
+
+-- Filter rows to include only ranks 1 to 3 within each year
+NONEMPTY(
+    FILTER(
+        CROSSJOIN(
+            [Time Interval],
+            [Matching Causes]
+        ),
+        [Measures].[RankByScoreCause] >= 1 AND [Measures].[RankByScoreCause] <= 3 -- Keep only top 3 ranks
+    ),
+    { [Measures].[Count unique Crash id] }
+) ON ROWS
+
+FROM [GROUP ID 12 DB]

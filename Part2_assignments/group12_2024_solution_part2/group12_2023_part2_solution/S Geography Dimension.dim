@@ -1,0 +1,282 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cf045142-ccfb-4d02-a54d-68f2142033ba" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>S Geography Dimension</ID>
+  <Name>S Geography Dimension</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3366" scrolltop="-6594" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8932" y="11451" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="S_GeographyDimension" left="211" top="-2075" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3112" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000280c00006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Group_ID_12_S_GeographyDimension" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3366</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6594</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>211</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-2075</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="135">
+            <Shape Id="Location Id" Expanded="true">
+              <Attributes>
+                <Attribute Id="Location Id" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Composit Street Name Chicago" Expanded="false">
+              <Attributes>
+                <Attribute Id="Composit Street Name Chicago" />
+              </Attributes>
+              <Position x="193" y="20" />
+            </Shape>
+            <Shape Id="Area Risk Level" Expanded="false">
+              <Attributes>
+                <Attribute Id="Area Risk Level" />
+              </Attributes>
+              <Position x="193" y="69" />
+            </Shape>
+            <Shape Id="Beat Id" Expanded="false">
+              <Attributes>
+                <Attribute Id="Beat Id" />
+              </Attributes>
+              <Position x="193" y="118" />
+            </Shape>
+            <Shape Id="Street Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Street Name" />
+              </Attributes>
+              <Position x="193" y="167" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="9249b988-220f-461b-8cad-38a5a1e02397">
+    <DataSourceViewID>Group ID 12 DB</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="e1d437a4-4f14-481d-a863-96266dd6914e">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="926535c1-2ed7-4a6a-ab9c-3fa2c845aea6">
+      <ID>Location Id</ID>
+      <Name>Location Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="108aad12-162d-47a5-87ed-f312536a35db">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="edc65559-a863-4676-814b-ccf8989638c8">
+            <TableID>Group_ID_12_S_GeographyDimension</TableID>
+            <ColumnID>location_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="fa109523-4509-47f4-800e-40e520a33c96">
+          <AttributeID>Street Name</AttributeID>
+          <Name>Street Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="73191771-cff4-433c-bffa-570cea222683">
+          <AttributeID>Beat Id</AttributeID>
+          <Name>Beat Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="35eaab9c-5d4e-4524-98ca-6b39e7285593">
+          <AttributeID>Area Risk Level</AttributeID>
+          <Name>Area Risk Level</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c28c24bd-e91e-471e-9aed-a47403913a77">
+          <AttributeID>Composit Street Name Chicago</AttributeID>
+          <Name>Composit Street Name Chicago</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8e898eaf-6089-4bdd-a020-fe67a0eac6bf">
+      <ID>Beat Id</ID>
+      <Name>Beat Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d670f286-6a78-45d1-868c-b10f8bf3646e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="26c90642-79c7-4509-8e4d-fac714958248">
+            <TableID>Group_ID_12_S_GeographyDimension</TableID>
+            <ColumnID>beat_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2f0c2dda-3417-4b59-8d4c-770bd1f0778d">
+      <ID>Street Name</ID>
+      <Name>Street Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c0916469-ea40-4add-ac60-882435b8343a">
+          <DataType>WChar</DataType>
+          <DataSize>35</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d214b936-7324-4ff4-8d54-85606d552c57">
+            <TableID>Group_ID_12_S_GeographyDimension</TableID>
+            <ColumnID>street_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d25a5e1-2115-4fb2-bc06-783adc6fdf4f">
+      <ID>Area Risk Level</ID>
+      <Name>Area Risk Level</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="90469cf6-0866-45be-950b-3e2c5afa1264">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d9297ea8-a3dd-422b-aa05-7958a684f7dd">
+            <TableID>Group_ID_12_S_GeographyDimension</TableID>
+            <ColumnID>area_risk_level</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="51da66a0-ca8f-487f-b737-df2071389988">
+      <ID>Composit Street Name Chicago</ID>
+      <Name>Composit Street Name Chicago</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="325dc693-ede5-4f63-a7df-cb612a62bb7d">
+          <DataType>WChar</DataType>
+          <DataSize>48</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="97d57ea7-f22f-4595-9774-0fb82c72b691">
+            <TableID>Group_ID_12_S_GeographyDimension</TableID>
+            <ColumnID>composit_street_name_chicago</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="8957809c-1084-4d1e-a469-da859a59b974">
+      <ID>Gerarchia</ID>
+      <Name>H Area Risk Level</Name>
+      <Levels>
+        <Level dwd:design-time-name="d4a4f725-622a-4829-a7e2-d0d8b2714eab">
+          <ID>Area Risk Level</ID>
+          <Name>Area Risk Level</Name>
+          <SourceAttributeID>Area Risk Level</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="31bfdffe-b26f-43e6-8d31-8cb70899e129">
+      <ID>Gerarchia 1</ID>
+      <Name>H Beat Id</Name>
+      <Levels>
+        <Level dwd:design-time-name="e9de16ee-61a8-4826-8880-0bd970d4b18b">
+          <ID>Beat Id</ID>
+          <Name>Beat Id</Name>
+          <SourceAttributeID>Beat Id</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="89a0b41a-6276-4d89-8182-8f75a2f31e72">
+      <ID>Gerarchia 2</ID>
+      <Name>H Location Id</Name>
+      <Levels>
+        <Level dwd:design-time-name="8714e0da-2018-49de-bad2-e0cafb330c09">
+          <ID>Location Id</ID>
+          <Name>Location Id</Name>
+          <SourceAttributeID>Location Id</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="f8c05ced-3ffd-403a-8131-ee111590eb11">
+      <ID>Gerarchia 3</ID>
+      <Name>H Street Name</Name>
+      <Levels>
+        <Level dwd:design-time-name="9bdefed8-a726-439e-ace1-5263968152ce">
+          <ID>Street Name</ID>
+          <Name>Street Name</Name>
+          <SourceAttributeID>Street Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="2669d2de-d9ec-4ca1-bb4a-32a675cc5f80">
+      <ID>Gerarchia 4</ID>
+      <Name>H Composit Street Name Chicago</Name>
+      <Levels>
+        <Level dwd:design-time-name="81ca889d-d9d2-4ae4-9404-13785fa4e003">
+          <ID>Composit Street Name Chicago</ID>
+          <Name>Composit Street Name Chicago</Name>
+          <SourceAttributeID>Composit Street Name Chicago</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
